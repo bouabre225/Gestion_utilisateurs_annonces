@@ -23,18 +23,6 @@ $passwords = $_POST['mot_de_passe'];
                 $_SESSION['user_nom'] = $user['nom'];
                 $_SESSION['user_prenom'] = $user['prenom'];
                 $_SESSION['last_activity'] = time();
-                        if (isset($_POST['remember'])) {
-                                 // Générer un token aléatoire
-                                $rememberToken = bin2hex(random_bytes(32));
-                                // Stocker le token dans la base pour ce user
-                                $stmt = $pdo->prepare("UPDATE users SET remember_token = :token WHERE id = :id");
-                                $stmt->execute([
-                                'token' => $rememberToken,
-                                'id' => $user['id']
-                                ]);
-                                // Créer un cookie qui dure 30 jours
-                                setcookie('remember_token', $rememberToken, time() + (86400 * 30), "/");
-                        }
 
                 header("Location: ./index.php");
                 exit();

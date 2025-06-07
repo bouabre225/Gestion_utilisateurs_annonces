@@ -99,7 +99,7 @@ include("./includes/connexion.php");
         </form>
         <div class="text-center mt-3">
             <span class="text-muted small">Pas encore de compte ?</span>
-            <a href="./register.php" class="small text-primary w-100 text-decoration-none">Créer un compte</a>
+            <a href="./creerCompte.php" class="small text-primary w-100 text-decoration-none">Créer un compte</a>
         </div>
     </div>
 </body>

@@ -1,4 +1,6 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) session_start();
+
 include("./includes/session.php");
 include ('./includes/connexion.php');
 ?>
@@ -71,13 +73,11 @@ include ('./includes/connexion.php');
                 <i class="bi bi-list"></i>
             </button>
             <h1 class="h5 mb-0">Bienvenue sur le Dashboard</h1>
-            <?php if (!isset($skip_session) && isset($_SESSION['user_id'])): ?>
             <div class="user-info d-flex justify-content-between align-items-center mb-4">
                 <img src="assets/images/avatar.jpeg" alt="Avatar">
                 <span><?= htmlspecialchars($_SESSION['user_nom']) ?></span>
                 <a href="./logout.php" class="btn btn-outline-primary btn-sm">Déconnexion</a>
             </div>
-            <?php endif; ?>
         </header>
         <main class="container py-4" id="dashboard-content">
 
