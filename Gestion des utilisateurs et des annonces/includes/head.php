@@ -26,7 +26,7 @@ include ('./includes/connexion.php');
     <nav class="sidebar d-flex flex-column position-fixed" id="sidebar">
         <div class="sidebar-header d-flex align-items-center">
             <i class="bi bi-lightning-charge-fill"></i>
-            <span>MonApp</span>
+            <span>MonApp</span> 
             <button class="sidebar-toggler d-none d-lg-inline" id="sidebarCollapse" title="Réduire le menu">
                 <i class="bi bi-chevron-double-left"></i>
             </button>
