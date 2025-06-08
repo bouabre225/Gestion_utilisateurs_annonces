@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 include("./includes/connexion.php");
 // login.php : Page de connexion Bootstrap moderne et responsive

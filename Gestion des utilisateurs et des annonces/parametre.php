@@ -1,4 +1,5 @@
 <?php
+//parametre.php
 include("./includes/session.php");
 include("./includes/connexion.php");
 include("./includes/head.php");
@@ -24,15 +25,19 @@ $user = $req->fetch();
     <link href="assets/css/bootstrap.css" rel="stylesheet">
 </head>
 
+<!-- body -->
 <body class="bg-light">
-
 <div class="container mt-5">
+    <!-- titre -->
     <h2 class="mb-4 text-center">Paramètres du profil</h2>
+    <!-- row -->
     <div class="row justify-content-center">
         <!-- Partie gauche : infos -->
         <div class="col-md-5 mb-4">
             <div class="card">
+                <!-- titre -->
                 <div class="card-header text-center">Vos informations</div>
+                <!-- corps -->
                 <div class="card-body">
                     <p><strong>Nom :</strong> <?= htmlspecialchars($user['nom']) ?></p>
                     <p><strong>Prenom :</strong> <?= htmlspecialchars($user['prenom']) ?></p>
@@ -45,7 +50,9 @@ $user = $req->fetch();
         <!-- Partie droite : formulaire -->
         <div class="col-md-7">
             <div class="card">
+                <!-- titre -->
                 <div class="card-header text-center">Modifier mes informations</div>
+                <!-- corps -->
                 <div class="card-body">
                     <form method="post" action="./parametres_action.php">
                         <div class="mb-3">

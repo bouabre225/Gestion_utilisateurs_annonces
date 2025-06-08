@@ -1,4 +1,5 @@
 <?php
+//inclusion des fichiers
 session_start();
 include("./includes/connexion.php");
 ?>
@@ -8,7 +9,7 @@ include("./includes/connexion.php");
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Créer un compte - MonApp</title>
+  <title>Créer un compte</title>
   <link href="assets/css/bootstrap.css" rel="stylesheet">
   <link href="assets/icons/bootstrap-icons.css" rel="stylesheet">
   <style>
@@ -53,7 +54,7 @@ include("./includes/connexion.php");
   </style>
 </head>
 <body>
-
+<!-- formulaire de creation de compte -->
 <div class="register-card shadow col-md-12 m-2">
         <div class="logo mb-3">
             <i class="bi bi-person-plus-fill"></i>

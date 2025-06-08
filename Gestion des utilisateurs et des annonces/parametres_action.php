@@ -1,12 +1,15 @@
 <?php
+
 include("./includes/session.php");
 include("./includes/connexion.php");
 
+// Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION['user_id'])) {
     header("Location: ./login.php");
     exit();
 }
 
+// Récupérer les données du formulaire
 $id = $_SESSION['user_id'];
 $nom = $_POST['nom'];
 $email = $_POST['email'];

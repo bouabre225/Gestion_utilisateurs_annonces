@@ -1,4 +1,5 @@
 <?php
+//inclusion des fichiers
 include("./includes/session.php");
 include("./includes/connexion.php");
 include("./includes/head.php");
@@ -11,7 +12,7 @@ $annonces = $stmt->fetchAll();
     <h2 class="m-2">Liste des annonces</h2>
     <a href="formAnnonce.php" class="btn btn-primary m-2 justify-content-end">Ajouter une annonce</a>
 </div>
-
+<!-- affichage des annonces  -->
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 m-2 ">
     <?php foreach ($annonces as $annonce): ?>
         <div class="col m-2">

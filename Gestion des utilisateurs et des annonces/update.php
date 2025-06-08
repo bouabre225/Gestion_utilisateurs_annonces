@@ -1,24 +1,23 @@
 <?php 
+//inclusion des fichiers
 include("includes/session.php");        
 include("includes/connexion.php");
 include("includes/head.php"); 
 
-?>
-
-
-<?php
 //eviter la declaration sur plusieur ligne ;
 
 $succes= $error = "";
 
-
+//verification de l'id
 if (isset($_GET['id']) && ($_GET['id'])) {
     $id =strip_tags ($_GET['id']); 
 
+    //recuperation des données
     $req = $pdo->prepare("SELECT * FROM users WHERE id = :id");
     $update = $req->execute(['id' => $id]);
     $user = $req->fetch(PDO::FETCH_ASSOC);
-    
+
+    //verification de l'id
     if ($update) {
         
     } else {
@@ -48,20 +47,6 @@ if($stmt){
     $error = "une erreur ces produite lors de la modification";
 }
 
-
- /*$req = $pdo->prepare("SELECT * FROM users WHERE email = :email");
-    $update = $req->execute(['email' => $email]);
-    $user = $req->fetch(PDO::FETCH_ASSOC);
-
-      if($user){
-              if(password_verify($password , $user['mot_de_passe'])){
-                  $succes = "modification effectue avec succes";
-              } else{
-                $error = "une erreur ces produite lors de la modification";
-              }
-      } else {
-          $error = "ID ou mot  de passe icorrecte ";
-      }*/
 } 
 ?> 
 
