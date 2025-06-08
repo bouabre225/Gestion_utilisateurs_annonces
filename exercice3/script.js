@@ -3,16 +3,24 @@ const nom = document.getElementById("lastname");
 const prenom = document.getElementById("firstname");
 const email = document.getElementById("email");
 const mot_de_passe = document.getElementById("password");
+const mot_de_passe_confirm = document.getElementById("passwordConfirm");
 
 const nomError = document.getElementById("erreurNom") ;
 const prenomError = document.getElementById("erreurPrenom");
 const emailError = document.getElementById("erreurEmail");
 const mot_de_passeError = document.getElementById("erreurPassword");
+const mot_de_passe_confirmError = document.getElementById("erreurPasswordConfirm");
 
 const regexNom = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/;
 const regexPrenom = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/;
 const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const regexPassword = /^.{8,}$/;
+
+
+const password = mot_de_passe.value.trim();
+const passwordConfirm = mot_de_passe_confirm.value.trim();
+console.log(password);
+console.log(passwordConfirm);
 
 
 registrationForm.addEventListener("submit", function(event) {
@@ -59,7 +67,17 @@ registrationForm.addEventListener("submit", function(event) {
       mot_de_passe.classList.remove("is-invalid");
     }
 
+    //mot de passe confirm
+    if (password !== passwordConfirm) {
+      mot_de_passe_confirmError.textContent = "les mots de passe ne correspondent pas";
+      mot_de_passe_confirm.classList.add("is-invalid");
+      isValid = false;
+    } else {
+      mot_de_passe_confirmError.textContent = '';  
+      mot_de_passe_confirm.classList.remove("is-invalid");
+    }
+
     if (isValid) {
-      registrationForm.submit();
+      this.submit();
     }
 });

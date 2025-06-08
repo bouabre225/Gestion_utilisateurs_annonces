@@ -1,5 +1,4 @@
 <?php 
-$skip_session = true;
 include("./includes/connexion.php");
 include("./includes/head.php"); 
 
@@ -39,7 +38,7 @@ exit();
         <div class="logo mb-3 text-center pt-3">
             <i class="bi bi-person-plus-fill"></i>
         </div>
-        <h2 class="text-center mb-4">Créer un compte</h2>
+        <h2 class="text-center mb-4">Enregistrer un utilisateur</h2>
         <form  id="registrationForm" method="post" action="" enctype="multipart/form-data" class="col-md-6 m-auto p-2">
             <div class="mb-3">
                 <label for="lastname" class="form-label">Nom</label>
@@ -73,12 +72,8 @@ exit();
                     <div class="invalid-feedback" id="erreurPassword"></div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary w-100 mb-2">S'inscrire</button>
+            <button type="submit" class="btn btn-primary w-100 mb-4">Enregistrer</button>
         </form>
-        <div class="text-center mt-3 mb-5">
-            <span class="text-muted small">Déjà un compte ?</span>
-            <a href="./login.php" class="small text-primary text-decoration-none">Se connecter</a>
-        </div>
         <script src="./script.js"></script>
 
-<?php //include("./includes/footer.php"); ?>
+<?php include("./includes/footer.php"); ?>

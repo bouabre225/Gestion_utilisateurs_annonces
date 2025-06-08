@@ -14,29 +14,29 @@ include("./includes/head.php");
         </a>
     </div>
 </div>
-                    <div class="col-md-12 m-2">
-                        <div class=" p-4 shadow card">
-                            <table class="table table table-bordered table-striped">
-                            <tr>
-                            <thead>
-                                <td class="col-md-1 text-center card-title">ID</td>
-                                <td class="col-md-2 text-center card-title">NOM</td>
-                                <td class="col-md-2 text-center card-title">PRENOM</td>
-                                <td class="col-md-2 text-center card-title">EMAIL</td>
-                                <td class="col-md-2 text-center card-title">ACTION</td>
+                    <div class="col-md-12 m-2 ">
+                        <div class=" p-4 shadow card table-responsive">
+                            <table class="table table table-bordered table-striped table-hover">
+                            <thead class="table-dark">
+                                <tr class="table-dark">
+                                    <td class="col-md-1 text-center card-title">ID</td>
+                                    <td class="col-md-2 text-center card-title">NOM</td>
+                                    <td class="col-md-2 text-center card-title">PRENOM</td>
+                                    <td class="col-md-2 text-center card-title">EMAIL</td>
+                                    <td class="col-md-2 text-center card-title">ACTION</td>
+                                </tr>
                             </thead>
-                            </tr>
-                            <tbody >
+                            <tbody class="table-light">
                                 <?php if(!empty($users)){ ?>
                                 <?php foreach($users as $user):?>
-                                    <tr>
+                                    <tr class="table-light">
                                         <td class="col-md-1 text-center card-text"> <?php echo $user["id"]?> </td>
                                         <td class="col-md-2 text-center card-text"> <?php echo $user["nom"]?> </td>
                                         <td class="col-md-2 text-center card-text"> <?php echo $user["prenom"]?> </td>
                                         <td class="col-md-2 text-center card-text"> <?php echo $user["email"]?> </td> 
                                         <td  class="mt-auto d-flex justify-content-between gap-2">
-                                            <a class="btn btn-danger" href="./includes/delete.php?id=<?php echo$user["id"] ?>">supprimer</a>
-                                            <a class="btn btn-primary" href="./update.php?id= <?php echo $user["id"] ?>">modifier</a>
+                                            <a class="btn btn-danger btn-sm" href="./includes/delete.php?id=<?php echo$user["id"] ?>">supprimer</a>
+                                            <a class="btn btn-primary btn-sm" href="./update.php?id= <?php echo $user["id"] ?>">modifier</a>
                                         </td>
                                     </tr>
                                     <?php endforeach; ?>
