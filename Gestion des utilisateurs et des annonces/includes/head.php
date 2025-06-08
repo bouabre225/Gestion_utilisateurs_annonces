@@ -11,7 +11,7 @@ include ('./includes/connexion.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Dashboard </title>
+    <title>MonApp de gestion des utilisateurs et des annonces </title>
     <!-- Bootstrap 5 -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
