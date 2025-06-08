@@ -13,7 +13,7 @@ $annonces = $stmt->fetchAll();
     <a href="formAnnonce.php" class="btn btn-primary m-2 justify-content-end">Ajouter une annonce</a>
 </div>
 <!-- affichage des annonces  -->
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 m-2 ">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
     <?php foreach ($annonces as $annonce): ?>
         <div class="col m-2">
             <div class="card h-100 shadow-sm card-body">
