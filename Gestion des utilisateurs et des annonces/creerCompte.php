@@ -107,6 +107,6 @@ include("./includes/connexion.php");
             <span class="text-muted small">Déjà un compte ?</span>
             <a href="./login.php" class="small text-primary text-decoration-none">Se connecter</a>
         </div>
-        <script src="./script.js"></script>
+        <script src="./assets/js/script.js"></script>
 </body>
 </html> 
