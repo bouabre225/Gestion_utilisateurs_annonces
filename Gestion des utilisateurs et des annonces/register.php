@@ -74,6 +74,6 @@ exit();
             </div>
             <button type="submit" class="btn btn-primary w-100 mb-4">Enregistrer</button>
         </form>
-        <script src="./script.js"></script>
+        <script src="./assets/js/script.js"></script>
 
 <?php include("./includes/footer.php"); ?>
