@@ -10,7 +10,7 @@ $annonces = $stmt->fetchAll();
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="m-2">Liste des annonces</h2>
-    <a href="formAnnonce.php" class="btn btn-primary m-2 justify-content-end">Ajouter une annonce</a>
+    <a href="formAnnonce.php" class="btn btn-primary m-2 justify-content-end btn-sm">Ajouter une annonce</a>
 </div>
 <!-- affichage des annonces  -->
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
@@ -33,5 +33,5 @@ $annonces = $stmt->fetchAll();
         </div>
     <?php endforeach; ?>
 </div>
-
+<script src="./assets/js/script_lien.js"></script>
 <?php include("./includes/footer.php"); ?>

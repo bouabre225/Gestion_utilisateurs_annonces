@@ -61,5 +61,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </div>
     <button type="submit"class="btn btn-primary w-100">Ajouter</button>
 </form>
+<script src="./assets/js/script_lien.js"></script>
 
 <?php include("./includes/footer.php"); ?>
